@@ -6,26 +6,28 @@ A framework for progressing forms steps. Supports very simple path branching.
 * JQuery
 * JQuery Validate https://jqueryvalidation.org/
 
-## About step progression
+# Documentation
 
-## Groups / Steps
+## Insights
+
+### Groups / Steps
 1. If there's only one progression path, then there's no need to add `data-group="somegroup"` attributes to your step container. 
 2. All steps without a `data-group` attribute will default to the `all` group. 
 3. The first step of the form must not contain a `data-group` attribute, or the `data-group` attribute must have a value of `"all"`
 4. If a radio or select input is selected with a `data-set-group="somegroup"` attriubute, then at the click of the next button the step progression will switch to the newly set group. If a user completes all steps in a group they will be prompted with the submit button. If additional steps without `data-group` exist after all the steps of a group have been completed, the framework will progress to the next step in line of the `"all"` group that has not yet been progressed. 
 5. This framework does not support sub-group branching, but it may work well if attempted. 
 
-## Buttons
+### Buttons
 1. There are three supported buttons: Back, Next, and Submit which require classes `back`, `next`, and `submit`. 
 
-## Progress Bar
+### Progress Bar
 1. This framework loosely supports a progress bar, but it will probably need to be re-written to suit your needs. No tutorial is offered on how to leverage this feature at the moment, but a lot can be learned by quickly studing `jquery.form-progression.js`. 
 
-## Field Validation
+### Field Validation
 
 1. Currently the only field validation required is powered by the `required` attribute, and this validation depends on jQuery Validation Plugin to also be installed.
 
-## Multiple Form Support 
+### Multiple Form Support 
 
 1. This framework supports multiple forms. 
 2. Enter `formSlider` into your developer's console to explore the data prepared by this library. 
@@ -35,7 +37,7 @@ A framework for progressing forms steps. Supports very simple path branching.
 
 ### HTML Exmaple With Multiple Groups
 
-```
+```html
 <form id="footer-new-user">
 
     <!-- This would be interpreted as step 1 of group "all" -->
@@ -99,9 +101,9 @@ A framework for progressing forms steps. Supports very simple path branching.
 ```
 
 ### Jquery
-```
+```javascript
 jQuery(document).ready(function() {
-    formSlider.init('#footer-new-user'); /* replace #footer-new-user with a form element selector */
+    formSlider.init('#some-form-id'); /* <form></form> */
 });
 ```
 
