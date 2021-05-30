@@ -8,7 +8,7 @@ A jQuery framework for step progression inside forms.
 
 ## How to implement
 
-### HTML Exmaple With Multiple Groups
+### HTML Example With Multiple Groups
 
 ```html
 <form id="footer-new-user">
