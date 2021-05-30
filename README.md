@@ -1,5 +1,5 @@
 # jQuery-Form-Progression
-A framework for progressing forms steps. Supports very simple path branching.
+A jQuery framework for step progression inside forms. 
 
 ## Dependencies:
 
