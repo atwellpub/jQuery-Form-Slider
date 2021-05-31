@@ -1,5 +1,5 @@
-# jQuery-Form-Progression
-A jQuery framework for step progression inside forms. 
+# jQuery-Form-Slider
+A jQuery framework for step progression inside forms.
 
 ## Dependencies:
 
