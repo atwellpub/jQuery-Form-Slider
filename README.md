@@ -8,7 +8,7 @@ A jQuery framework for step progression inside forms.
 
 ## Demo 
 
-Demo pending. 
+https://jsfiddle.net/gh/get/library/pure/jquery-form-slider/
 
 ## How to implement
 

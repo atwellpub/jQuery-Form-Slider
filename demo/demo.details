@@ -1,0 +1,12 @@
+---
+ name: jQuery Form Slider - Demo
+ description: Barebones representation of the jQuery Form Slider Framework
+ authors:
+   - Hudson Atwell
+ resources:
+   - https://code.jquery.com/jquery-3.6.0.slim.min.js
+   - https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js
+   - https://raw.githubusercontent.com/atwellpub/jQuery-Form-Slider/main/jquery.form-slider.js
+ normalize_css: no
+ load_type: d
+ ...
