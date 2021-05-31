@@ -58,7 +58,7 @@ A jQuery framework for step progression inside forms.
       <input name="group_b_answer" required>
     </div>
     
-    <!-- This final step is as step 3 of the "all", and would occur after the prior groups completed their steps. -->
+    <!-- This would be interpreted as step 3 of the "all", and would occur after the prior groups completed all their steps. -->
     <!-- Overall this step would represent the 4th step of a "all" + "group-a" progression flow and the 5th step of a "all" + "group-b" submission flow -->
     <div class="step">
       <label>Press Submit to Complete Form</label>
