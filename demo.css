@@ -1,13 +1,17 @@
-form {
-    padding: 20px 40px 20px 40px;
-    width:250px;
-}
-
-/* start out with all steps hidden. Framework will show the first frame */
+/* START OUT WITH ALL STEPS HIDDEN */
+/* HIDE THE BACK AND SUBMIT BUTTON AS WELL */
 .step,
 .back,
 .submit {
     display:none;
+}
+
+/**
+ * EVERYTHING BELOW THIS LINE IS COSMETIC
+ */
+form {
+    padding: 20px 40px 20px 40px;
+    width:250px;
 }
 
 .buttons {
