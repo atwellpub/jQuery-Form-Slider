@@ -154,20 +154,21 @@ var formSlider = {
         /* set current step to next step */
         formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep = nextStep;
 
-        /* check ahead within the group */
+        /* check ahead within the current group to see if there is another step after the one we just switched to */
         var lookAheadGroup = nextStep + 1;
         var hasAnotherGroupStep = false;
         if (typeof formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].steps[lookAheadGroup] != 'undefined') {
             hasAnotherGroupStep = true;
         }
 
+        /* check ahead within the "all" group to see if there is another step after it's last recorded step */
         var lookAheadAll = formSlider.forms[formId].groups["all"].currentStep + 1;
         var hasAnotherAllStep = false;
         if (typeof formSlider.forms[formId].groups["all"].steps[lookAheadAll] != 'undefined') {
             hasAnotherAllStep = true;
         }
 
-        /* if there are no steps after this one then show submit button */
+        /* if there are no more steps in the current group or the "all" group then show submit button */
         var isLastStep = false;
         if (!hasAnotherGroupStep && !hasAnotherAllStep ) {
             formSlider.toggleSubmitButton(formId);
@@ -183,6 +184,7 @@ var formSlider = {
 
     },
     goBack : function() {
+        
         var formId = '#' + jQ(this).closest('form').attr('id');
         var previousStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep - 1;
 
