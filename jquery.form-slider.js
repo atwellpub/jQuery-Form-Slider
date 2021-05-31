@@ -74,13 +74,13 @@ var formSlider = {
 
         /* setup validation */
         jQ(id).validate({
-          rules: {
-            name: "required",
-          }
+            rules: {
+                name: "required",
+            }
         });
 
         /* set initial progress bar state */
-        formSlider.updateProgressBar(id , true);
+        formSlider.updateProgressBar(id , false);
 
     },
     addListeners : function(id) {
@@ -122,10 +122,10 @@ var formSlider = {
                 return;
             }
         }
-        
+
         /* show back button on first step progression */
         formSlider.toggleBackButton(formId , 'show');
-        
+
         /* get next step of current group path */
         var nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep + 1;
 
@@ -179,11 +179,11 @@ var formSlider = {
         formSlider.forms[formId].agnosticStepCount++;
 
         /* update progressPar */
-        formSlider.updateProgressBar(formId , false , isLastStep);
+        formSlider.updateProgressBar(formId , isLastStep);
 
     },
     goBack : function() {
-        
+
         var formId = '#' + jQ(this).closest('form').attr('id');
         var previousStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep - 1;
 
@@ -207,7 +207,7 @@ var formSlider = {
             previousStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep;
         }
         /* else treat normally */
-         else  {
+        else  {
             formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep = previousStep;
         }
 
@@ -261,7 +261,7 @@ var formSlider = {
                 break;
         }
     },
-    updateProgressBar : function(formId , isFirst = false , isLast = false) {
+    updateProgressBar : function(formId , isLast = false) {
 
         if (!jQuery(".progress-bar").length) {
             return;
@@ -270,7 +270,7 @@ var formSlider = {
         var totalSteps = 0;
 
         /* if first step, consider all steps as total number of possible steps */
-        if (isFirst) {
+        if (formSlider.forms[formId].groupsProgressed.length == 1) {
             for ( var groupName in formSlider.forms[formId].groups) {
                 totalSteps = totalSteps + formSlider.forms[formId].groups[groupName].initCount;
             }
