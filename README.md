@@ -104,5 +104,5 @@ jQuery(document).ready(function() {
 ### Multiple Form Support 
 
 1. This framework supports multiple forms. 
-2. Enter `formSlider` into your developer's console to explore the data prepared by this library. 
+2. The `formSlider` object is accessible from the developers' console, too. 
 
