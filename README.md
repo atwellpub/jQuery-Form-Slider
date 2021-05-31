@@ -95,7 +95,7 @@ jQuery(document).ready(function() {
 1. There are three supported buttons: Back, Next, and Submit which require classes `back`, `next`, and `submit`. 
 
 ### Progress Bar
-1. This framework loosely supports a progress bar, but it will probably need to be re-written to suit your needs. No tutorial is offered on how to leverage this feature at the moment, but a lot can be learned by quickly studing `jquery.form-progression.js`. 
+1. This framework loosely supports a progress bar, but it will probably need to be re-written to suit your needs. No tutorial is offered on how to leverage this feature at the moment, but a lot can be learned by quickly studing `jquery.form-slider.js`. 
 
 ### Field Validation
 
