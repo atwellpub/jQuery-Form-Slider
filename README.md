@@ -6,6 +6,10 @@ A jQuery framework for step progression inside forms.
 * JQuery
 * JQuery Validate https://jqueryvalidation.org/
 
+## Demo 
+
+Demo pending. 
+
 ## How to implement
 
 ### HTML Example With Multiple Groups
