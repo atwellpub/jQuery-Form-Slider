@@ -73,7 +73,7 @@ A jQuery framework for step progression inside forms.
 </form>
 ```
 
-### Jquery
+### jQuery
 ```javascript
 jQuery(document).ready(function() {
     formSlider.init('#some-form-id'); /* <form></form> */
