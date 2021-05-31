@@ -15,7 +15,7 @@ Demo pending.
 ### HTML Example With Multiple Groups
 
 ```html
-<form id="footer-new-user">
+<form id="example-with-groups">
 
     <!-- This would be interpreted as step 1 of group "all" -->
     <div class="step">
