@@ -1,6 +1,6 @@
 ---
  name: jQuery Form Slider Demo
- description: Barebones representation of the jQuery Form Slider Framework
+ description: Barebones representation of the jQuery Form Slider Framework. For more information head here: https://github.com/atwellpub/jQuery-Form-Slider
  authors:
    - Hudson Atwell
  resources:
