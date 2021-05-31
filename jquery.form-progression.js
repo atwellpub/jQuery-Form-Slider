@@ -126,22 +126,24 @@ var formSlider = {
             }
 
         }
+        
+        /* get next step of current group path */
+        var nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep + 1;
 
         /* check to see if there's a new group path */
         var checkGroupPath = jQ(formId + ' .step[data-step="'+currentStep+'"][data-group="'+formSlider.forms[formId].currentGroup+'"]').find('[data-set-group]:checked');
 
         /* set new group path if it's being changed */
-        var nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep + 1;
         if (checkGroupPath.length>0) {
             formSlider.setGroup(formId, checkGroupPath.data('set-group'));
             nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep
         }
 
+        /* check if the next step in this sequence exists as a step in current group, and change groups back to "all" if it doesn't */
         if (typeof formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].steps[nextStep] == 'undefined') {
             formSlider.setGroup(formId, 'all');
             nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep + 1;
         }
-
 
         /* hide all steps */
         jQ(formId).find('.step').hide();
