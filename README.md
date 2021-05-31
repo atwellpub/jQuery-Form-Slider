@@ -39,7 +39,7 @@ https://jsfiddle.net/gh/get/jquery/3.0/atwellpub/jQuery-Form-Slider/contents
           </label>
           
           <Label>Group B
-          <input data-set-group="group-a" type="radio" name="important_choice" value="somevalue" required>
+          <input data-set-group="group-b" type="radio" name="important_choice" value="somevalue" required>
           </label>
         
     </div>
