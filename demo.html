@@ -4,11 +4,11 @@
     <div class="step">
 
         <label>
-            Name
+            Name <br>
             <input name="name" required>
         </label>
 
-        <label>Email
+        <label>Email <br>
             <input name="email" required>
         </label>
     </div>
@@ -29,20 +29,20 @@
 
     <!-- This would be interpreted as step 1 of "group-a" , and overall the 3rd step of the entire progression if "Group A" was chosen by the user -->
     <div class="step" data-group="group-a">
-        <label>Group A Question</label>
-        <input name="group_a_answer" required>
+        <label>Group A Question One:</label>
+        <input name="group_a_answer" placeholder="Place your answer here" required>
     </div>
 
     <!-- This would be interpreted as step 1 of "group-b" , and overall the 3rd step of the entire progression if "Group B" was chosen by the user -->
     <div class="step" data-group="group-b">
-        <label>Group B Question 1</label>
+        <label>Group B Question One</label>
         <input name="group_b_answer" required>
     </div>
 
     <!-- This would be interpreted as step 2 of "group-b" , and overall the 4th step of the entire progression if "Group B" was chosen by the user -->
     <div class="step" data-group="group-b">
-        <label>Group B Question 2</label>
-        <input name="group_b_answer" required>
+        <label>Group B Question Two</label>
+        <input name="group_b_answer" placeholder="Place your answer here" required>
     </div>
 
     <!-- This would be interpreted as step 3 of the "all", and would occur after the prior groups completed all their steps. -->
@@ -52,9 +52,10 @@
     </div>
 
     <!-- These buttons will hide/reveal appropriately as a user progresses through form steps -->
-    <div class="">
+    <div class="buttons">
         <button type="button" class="back">Back</button>
         <button type="button" class="next">Next</button>
         <button type="submit" class="submit">Submit</button>
     </div>
+    <div class="progress-bar"></div>
 </form>
