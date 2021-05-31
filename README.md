@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
 2. All steps without a `data-group` attribute will default to the `all` group. 
 3. The first step of the form must not contain a `data-group` attribute, or the `data-group` attribute must have a value of `"all"`
 4. If a radio or select input is selected with a `data-set-group="somegroup"` attriubute, then at the click of the next button the step progression will switch to the newly set group. If a user completes all steps in a group they will be prompted with the submit button. If additional steps without `data-group` exist after all the steps of a group have been completed, the framework will progress to the next step in line of the `"all"` group that has not yet been progressed. 
-5. This framework does not support sub-group branching, but it may work well if attempted. 
+5. This framework does not support sub-group branching, but it may work well if attempted.
 
 ### Buttons
 1. There are three supported buttons: Back, Next, and Submit which require classes `back`, `next`, and `submit`. 
