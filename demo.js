@@ -1,3 +1,3 @@
 jQuery(document).ready(function() {
-    formSlider.init('#some-form-id');
+    formSlider.init('#example-with-groups');
 });
