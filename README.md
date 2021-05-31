@@ -31,11 +31,11 @@ A jQuery framework for step progression inside forms.
     <div class="step">
     
           <Label>Group A
-          <input data-set-group="group-a" type="radio" name="important_choice" required>
+          <input data-set-group="group-a" type="radio" name="important_choice" value="somevalue" required>
           </label>
           
           <Label>Group B
-          <input data-set-group="group-a" type="radio" name="important_choice" required>
+          <input data-set-group="group-a" type="radio" name="important_choice" value="somevalue" required>
           </label>
         
     </div>
