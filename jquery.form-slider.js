@@ -111,9 +111,6 @@ var formSlider = {
         var currentGroup = formSlider.forms[formId].currentGroup;
         var currentStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep;
 
-        /* show back button on first step progression */
-        formSlider.toggleBackButton(formId , 'show');
-
         /* check if required items are populated */
         for(var i=0; i < formSlider.forms[formId].groups[currentGroup].steps[currentStep].required.length; i++) {
             var requiredField = formSlider.forms[formId].groups[currentGroup].steps[currentStep].required[i];
@@ -124,8 +121,10 @@ var formSlider = {
                 jQ(formId + ' [name="'+requiredField+'"]').valid();
                 return;
             }
-
         }
+        
+        /* show back button on first step progression */
+        formSlider.toggleBackButton(formId , 'show');
         
         /* get next step of current group path */
         var nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep + 1;
