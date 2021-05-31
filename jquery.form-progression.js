@@ -44,7 +44,7 @@ var formSlider = {
                 formSlider.forms[id].groups[group].initCount++;
             }
 
-            /* set group setp order as data attritube */
+            /* set group step order as data attritube */
             var step = formSlider.forms[id].groups[group].initCount;
             jQ(this).attr('data-step' , step);
 
