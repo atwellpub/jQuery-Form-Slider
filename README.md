@@ -85,7 +85,7 @@ jQuery(document).ready(function() {
 ## Insights
 
 ### Groups / Steps
-1. If there's only one progression path, then there's no need to add `data-group="somegroup"` attributes to your step container. 
+1. If there's only one progression path, then there's no need to add `data-group="somegroup"` attributes to your step containers. 
 2. All steps without a `data-group` attribute will default to the `all` group. 
 3. The first step of the form must not contain a `data-group` attribute, or the `data-group` attribute must have a value of `"all"`
 4. If a radio or select input is selected with a `data-set-group="somegroup"` attriubute, then at the click of the next button the step progression will switch to the newly set group. If a user completes all steps in a group they will be prompted with the submit button. If additional steps without `data-group` exist after all the steps of a group have been completed, the framework will progress to the next step in line of the `"all"` group that has not yet been progressed. 
