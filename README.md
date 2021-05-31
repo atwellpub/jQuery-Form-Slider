@@ -53,13 +53,13 @@ https://jsfiddle.net/gh/get/jquery/3.0/atwellpub/jQuery-Form-Slider/contents
     <!-- This would be interpreted as step 1 of "group-b" , and overall the 3rd step of the entire progression if "Group B" was chosen by the user -->
     <div class="step" data-group="group-b">
       <label>Group B Question 1</label>
-      <input name="group_b_answer" required>
+      <input name="group_b_answer_1" required>
     </div>
     
     <!-- This would be interpreted as step 2 of "group-b" , and overall the 4th step of the entire progression if "Group B" was chosen by the user -->
     <div class="step" data-group="group-b">
       <label>Group B Question 2</label>
-      <input name="group_b_answer" required>
+      <input name="group_b_answer_2" required>
     </div>
     
     <!-- This would be interpreted as step 3 of the "all", and would occur after the prior groups completed all their steps. -->
