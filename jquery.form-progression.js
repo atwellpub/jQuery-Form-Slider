@@ -121,9 +121,7 @@ var formSlider = {
 
             /* if required field does not have a value then fire validation routine */
             if (!value) {
-                console.log("required field" + requiredField)
-                console.log("value" + value)
-                 jQ(formId + ' [name="'+requiredField+'"]').valid();
+                jQ(formId + ' [name="'+requiredField+'"]').valid();
                 return;
             }
 
@@ -183,8 +181,6 @@ var formSlider = {
 
     },
     goBack : function() {
-        console.log('goBack');
-
         var formId = '#' + jQ(this).closest('form').attr('id');
         var previousStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep - 1;
 
@@ -232,11 +228,8 @@ var formSlider = {
 
     },
     goSubmit : function() {
-        console.log('goSubmit');
     },
     toggleSubmitButton : function(formId , toggle = '') {
-        console.log('toggleSubmitButton');
-
         switch (toggle) {
             case 'hide':
                 jQ(formId).find('.submit').hide();
@@ -253,7 +246,6 @@ var formSlider = {
         }
     },
     toggleBackButton : function(formId , toggle = "") {
-        console.log('toggleBackButton');
         switch (toggle) {
             case 'hide':
                 jQ(formId).find('.back').hide();
