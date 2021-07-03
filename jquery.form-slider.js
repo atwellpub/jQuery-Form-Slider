@@ -293,6 +293,6 @@ var formSlider = {
         var progressPercent = formSlider.forms[formId].agnosticStepCount / totalSteps;
         progressPercent = Math.round(progressPercent * 100);
 
-        jQuery(formId + ".progress-bar").css("width", progressPercent + "%").html(progressPercent + "%");
+        jQuery(formId + " .progress-bar").css("width", progressPercent + "%").html(progressPercent + "%");
     }
 
