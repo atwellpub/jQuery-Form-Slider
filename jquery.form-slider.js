@@ -9,6 +9,11 @@ var formSlider = {
     forms:[],
     init: function(id) {
 
+        /* do not initialize form if doesn't exist */
+        if (!jQ(id).length) {
+            return;
+        }
+
         formSlider.forms[id] = {};
         formSlider.forms[id].form_id = id;
         formSlider.forms[id].currentGroup = 'all';
@@ -74,9 +79,9 @@ var formSlider = {
 
         /* setup validation */
         jQ(id).validate({
-            rules: {
-                name: "required",
-            }
+          rules: {
+            name: "required",
+          }
         });
 
         /* set initial progress bar state */
@@ -133,7 +138,7 @@ var formSlider = {
         var checkGroupPath = jQ(formId + ' .step[data-step="'+currentStep+'"][data-group="'+formSlider.forms[formId].currentGroup+'"]').find('[data-set-group]:checked');
 
         /* set new group path if it's being changed */
-        if (checkGroupPath.length>0) {
+        if (checkGroupPath.length>0 &&  checkGroupPath.data('set-group') != formSlider.forms[formId].currentGroup ) {
             formSlider.setGroup(formId, checkGroupPath.data('set-group'));
             nextStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep
         }
@@ -193,7 +198,7 @@ var formSlider = {
         /* Geesh someone refactor the below */
         /* if current group matches the previous group, treat normally */
         if ( formSlider.forms[formId].currentGroup == formSlider.forms[formId].previousGroup ) {
-            formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep = previousStep - 1;
+            formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep = ( (previousStep - 1) > 0 ) ? previousStep : 1;
         }
         /* if current group is "all" and previous step is the first step then set current step of "all" back to 1 and switch to the previous group */
         else if ( formSlider.forms[formId].currentGroup == "all" && previousStep == 1 ) {
@@ -207,10 +212,9 @@ var formSlider = {
             previousStep = formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep;
         }
         /* else treat normally */
-        else  {
+         else  {
             formSlider.forms[formId].groups[formSlider.forms[formId].currentGroup].currentStep = previousStep;
         }
-
 
         /* if previous step is first step hide back button */
         if (formSlider.forms[formId].currentGroup == "all" && previousStep==1 ) {
@@ -263,7 +267,7 @@ var formSlider = {
     },
     updateProgressBar : function(formId , isLast = false) {
 
-        if (!jQuery(".progress-bar").length) {
+        if (!jQuery(formId + " .progress-bar").length) {
             return;
         }
 
@@ -289,7 +293,6 @@ var formSlider = {
         var progressPercent = formSlider.forms[formId].agnosticStepCount / totalSteps;
         progressPercent = Math.round(progressPercent * 100);
 
-        jQuery(".progress-bar").css("width", progressPercent + "%").html(progressPercent + "%");
+        jQuery(formId + ".progress-bar").css("width", progressPercent + "%").html(progressPercent + "%");
     }
 
-}
